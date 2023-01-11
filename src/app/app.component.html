@@ -110,7 +110,8 @@
             </div>
         </div>
     </div>
-    <h2 class="mt-4 py-2 px-3" [style.color]="textColor" [style.backgroundColor]="bgColor" [style.border-radius]="bRadius">Style Binding | Dynamic Style</h2>
+    <h2 class="mt-4 py-2 px-3" [style.color]="textColor" [style.backgroundColor]="bgColor"
+        [style.border-radius]="bRadius">Style Binding | Dynamic Style</h2>
     <button class="btn btn-primary" (click)="changeColor()">Change Color</button>
 
     <h2 class="mt-4">Basic Form</h2>
@@ -118,42 +119,47 @@
         <div class="mb-3 mt-3">
             <label for="email" class="form-label">Name:</label>
             <input type="text" ngModel class="form-control" id="email" placeholder="User name" name="name">
-          </div>
+        </div>
         <div class="mb-3 mt-3">
-          <label for="email" class="form-label">Email:</label>
-          <input type="email" ngModel class="form-control" id="email" placeholder="Enter email" name="email">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" ngModel class="form-control" id="email" placeholder="Enter email" name="email">
         </div>
         <div class="mb-3">
-          <label for="pwd" class="form-label">Password:</label>
-          <input type="password" ngModel class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+            <label for="pwd" class="form-label">Password:</label>
+            <input type="password" ngModel class="form-control" id="pwd" placeholder="Enter password" name="pswd">
         </div>
         <div class="form-check mb-3">
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" name="remember"> Remember me
-          </label>
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="remember"> Remember me
+            </label>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+    </form>
 
-      <ul *ngIf="formData.name">
+    <ul *ngIf="formData.name">
         <li>{{formData.name}}</li>
         <li>{{formData.email}}</li>
         <li>{{formData.pswd}}</li>
-      </ul>
+    </ul>
 
-      <h2 class="mt-4">Toggle Element | hide and show tag</h2>
-      <button class="btn btn-primary" (click)="toggleFun()">Toggle </button>
-      <h4 *ngIf="toggleProp">Toggle will work here</h4>
+    <h2 class="mt-4">Toggle Element | hide and show tag</h2>
+    <button class="btn btn-primary" (click)="toggleFun()">Toggle </button>
+    <h4 *ngIf="toggleProp">Toggle will work here</h4>
 
-      <h2 class="mt-4">Ng Bootstrap</h2>
-      <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+    <h2 class="mt-4">Ng Bootstrap</h2>
+    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
         <ngb-panel title="Simple">
             <ng-template ngbPanelContent>
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
-                moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
-                keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
-                vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                moon
+                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                3 wolf
+                moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                Nihil anim
+                keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                excepteur butcher
+                vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                haven't
                 heard of them accusamus labore sustainable VHS.
             </ng-template>
         </ngb-panel>
@@ -162,24 +168,88 @@
                 <span>&#9733; <b>Fancy</b> title &#9733;</span>
             </ng-template>
             <ng-template ngbPanelContent>
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
-                moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
-                keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
-                vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                moon
+                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                3 wolf
+                moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                Nihil anim
+                keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                excepteur butcher
+                vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                haven't
                 heard of them accusamus labore sustainable VHS.
             </ng-template>
         </ngb-panel>
         <ngb-panel title="Disabled" [disabled]="true">
             <ng-template ngbPanelContent>
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
-                moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
-                keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
-                vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                moon
+                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                3 wolf
+                moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                Nihil anim
+                keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                excepteur butcher
+                vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                haven't
                 heard of them accusamus labore sustainable VHS.
             </ng-template>
         </ngb-panel>
     </ngb-accordion>
-</div>
 
+    <h2 class="mt-4">Todo list in angular</h2>
+    <input type="text" name="" id="" placeholder="Enter List Name" #task class="form-control w-25 d-inline-block me-3">
+    <button class="btn btn-primary" (click)="addList(task.value)">Add List</button>
+
+    <!-- <table class="table table-bordered w-50 mt-4" *ngIf="todoList.length">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of todoList; let id = index">
+                <td>{{id}}</td>
+                <td>{{item.name}}</td>
+                <td><button class="btn btn-danger btn-sm" (click)="removeList(id)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table> -->
+    <table class="table table-bordered w-50 mt-4" *ngIf="todoList.length">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of todoList; let id = index">
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td><button class="btn btn-danger btn-sm" (click)="removeList(item.id)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="mt-4">Pass Data child to component</h2>
+    <div class="container">
+        <app-cockpit (serverCreated)="onServerAdded($event)" (bpCreated)="onBlueprintAdded($event)"></app-cockpit>
+        <div class="row">
+            <div class="col-12">
+                <button class="btn btn-primary mt-4 me-4" (click)="onChangeFirst()">Change First Element</button>
+                <button class="btn btn-primary mt-4" (click)="onDestroyFirst()">Destroy First Element</button>
+                <app-server-element *ngFor="let serverElement of serverElements" [element]="serverElement" [name]="serverElement.name">
+                    
+                    <p class="m-0" #contentParagraph>
+                        <strong *ngIf="serverElement.type === 'server'" class="text-danger">{{serverElement.content}}</strong>
+                        <em *ngIf="serverElement.type === 'blueprint'">{{serverElement.content}}</em>
+                    </p>
+                </app-server-element>
+            </div>
+        </div>
+    </div>
+</div>

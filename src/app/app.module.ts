@@ -7,11 +7,15 @@ import { AppComponent } from './app.component';
 import { UserAuthModule } from './user-auth/user-auth.module';
 import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ServerElementComponent } from './server-element/server-element.component';
+import { CockpitComponent } from './cockpit/cockpit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    ServerElementComponent,
+    CockpitComponent
   ],
   imports: [
     BrowserModule,

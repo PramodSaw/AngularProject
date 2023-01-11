@@ -7,7 +7,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  name = 'My App!';
+  title = 'My App!';
   displayInputValue = "";
   count = 0;
   userName = "Pramod";
@@ -98,4 +98,10 @@ export class AppComponent {
     })
   }
 
+  onChangeFirst(){
+    this.serverElements[0].name = 'Changed!';
+  }
+  onDestroyFirst(){
+    this.serverElements.splice(0, 1)
+  }
 }
