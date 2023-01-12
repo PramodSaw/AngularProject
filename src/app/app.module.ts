@@ -9,13 +9,15 @@ import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ServerElementComponent } from './server-element/server-element.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
+import { CurrencyConverterPipe } from './pipe/currency-converter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ServerElementComponent,
-    CockpitComponent
+    CockpitComponent,
+    CurrencyConverterPipe
   ],
   imports: [
     BrowserModule,

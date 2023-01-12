@@ -104,4 +104,11 @@ export class AppComponent {
   onDestroyFirst(){
     this.serverElements.splice(0, 1)
   }
+
+  pageTitle = "Basic of Pipes in angular";
+  TodayDate = Date();
+  usersList = {
+    name: 'Pramod',
+    Phone: 9087654321
+  }
 }

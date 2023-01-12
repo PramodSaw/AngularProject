@@ -252,4 +252,21 @@
             </div>
         </div>
     </div>
+    <h2 class="mt-4">Basic of Pipes in angular</h2>
+    <h2 class="mt-3">{{ pageTitle | uppercase}}</h2>
+    <h2 class="mt-3">{{ pageTitle | lowercase}}</h2>
+    <h2 class="mt-3">{{ TodayDate | date }}</h2>
+    <h2 class="mt-3">{{ TodayDate | date : 'fullDate' }}</h2>
+    <h2 class="mt-3">{{ TodayDate | date : 'dd/MM/YYYY' }}</h2>
+    <h2 class="mt-3">{{ TodayDate | date : 'HH:mm:ss' }}</h2>
+
+    <h2 class="mt-5">Advance Pipes</h2>
+    <h2 class="mt-3">{{ pageTitle | slice : 9 : 13 | uppercase }}</h2>
+    <h2 class="mt-3">{{ 30000.34554 | number : '0.1-1'}}</h2>
+    <h2 class="mt-3">{{ 20 | currency : 'INR'}}</h2>
+    <h2 class="mt-3">{{ usersList | json}}</h2>
+
+    <h2 class="mt-5">Custom Pipes</h2>
+    <h2 class="mt-3">{{ 20 | currencyConverter : 63}}</h2>
+
 </div>
