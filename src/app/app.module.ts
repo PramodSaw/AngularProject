@@ -10,6 +10,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ServerElementComponent } from './server-element/server-element.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { CurrencyConverterPipe } from './pipe/currency-converter.pipe';
+import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
+import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
+import { UnlessDirective } from './unless/unless.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { CurrencyConverterPipe } from './pipe/currency-converter.pipe';
     HeaderComponent,
     ServerElementComponent,
     CockpitComponent,
-    CurrencyConverterPipe
+    CurrencyConverterPipe,
+    BasicHighlightDirective,
+    BetterHighlightDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,

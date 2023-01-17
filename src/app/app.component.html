@@ -242,10 +242,12 @@
             <div class="col-12">
                 <button class="btn btn-primary mt-4 me-4" (click)="onChangeFirst()">Change First Element</button>
                 <button class="btn btn-primary mt-4" (click)="onDestroyFirst()">Destroy First Element</button>
-                <app-server-element *ngFor="let serverElement of serverElements" [element]="serverElement" [name]="serverElement.name">
-                    
+                <app-server-element *ngFor="let serverElement of serverElements" [element]="serverElement"
+                    [name]="serverElement.name">
+
                     <p class="m-0" #contentParagraph>
-                        <strong *ngIf="serverElement.type === 'server'" class="text-danger">{{serverElement.content}}</strong>
+                        <strong *ngIf="serverElement.type === 'server'"
+                            class="text-danger">{{serverElement.content}}</strong>
                         <em *ngIf="serverElement.type === 'blueprint'">{{serverElement.content}}</em>
                     </p>
                 </app-server-element>
@@ -268,5 +270,27 @@
 
     <h2 class="mt-5">Custom Pipes</h2>
     <h2 class="mt-3">{{ 20 | currencyConverter : 63}}</h2>
+
+    <h2 class="mt-4">ngFor and ngIf Recap</h2>
+    <h2 class="mt-4">ngClass and ngStyle Recap</h2>
+    <button class="btn btn-primary" (click)="onlyOdd = !onlyOdd">Odd Even Toggle</button>
+    <ul class="list-group" *ngIf="onlyOdd">
+        ` <li *ngFor="let odd of oddNumber" class="list-group-item" [ngClass]="{'text-danger' : odd % 2 !== 0}" [ngStyle]="{background: odd % 2 !== 0 ? 'yellow' : 'blue'}">{{ odd
+            }}
+        </li>
+    </ul>
+    <ul class="list-group" *appUnless="onlyOdd">
+        ` <li *ngFor="let even of evenNumber" class="list-group-item" [ngClass]="{'text-white' : even % 2 == 0}" [ngStyle]="{background: even % 2 !== 0 ? 'yellow' : 'blue'}">{{
+            even }}</li>
+    </ul>
+    <!-- <ul class="list-group" *ngIf="!onlyOdd">
+        ` <li *ngFor="let even of evenNumber" class="list-group-item" [ngClass]="{'text-white' : even % 2 == 0}" [ngStyle]="{background: even % 2 !== 0 ? 'yellow' : 'blue'}">{{
+            even }}</li>
+    </ul> -->
+
+    <h2 class="mt-4" appBasicHighlight>Creating Basic Directive</h2>
+
+    <h2 class="mt-4" [appBetterHighlight]="'red'" defaultColor="yellow">Creating Better Directive2</h2>
+    <!-- <h2 class="mt-4" [highlightColor]="'red'" [defaultColor]="'blue'" >Creating Better Directive</h2> -->
 
 </div>

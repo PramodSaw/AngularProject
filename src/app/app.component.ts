@@ -98,10 +98,10 @@ export class AppComponent {
     })
   }
 
-  onChangeFirst(){
+  onChangeFirst() {
     this.serverElements[0].name = 'Changed!';
   }
-  onDestroyFirst(){
+  onDestroyFirst() {
     this.serverElements.splice(0, 1)
   }
 
@@ -111,4 +111,8 @@ export class AppComponent {
     name: 'Pramod',
     Phone: 9087654321
   }
+
+  oddNumber = [1, 3, 5, 7];
+  evenNumber = [2, 4, 6, 8]
+  onlyOdd = false;
 }
