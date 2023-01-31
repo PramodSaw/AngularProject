@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { AccountService } from './accounts.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  providers: [AccountService]
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'My App!';
   displayInputValue = "";
   count = 0;
@@ -117,26 +119,33 @@ export class AppComponent {
   onlyOdd = false;
 
 
-  accounts = [
-    {
-      name: 'Master Account',
-      status: 'active'
-    },
-    {
-      name: 'Testaccount',
-      status: 'inactive'
-    },
-    {
-      name: 'Hidden Account',
-      status: 'unknown'
-    }
-  ];
+  // accounts = [
+  //   {
+  //     name: 'Master Account',
+  //     status: 'active'
+  //   },
+  //   {
+  //     name: 'Test Account',
+  //     status: 'inactive'
+  //   },
+  //   {
+  //     name: 'Hidden Account',
+  //     status: 'unknown'
+  //   }
+  // ];
 
-  onAccountAdded(newAccount: {name: string, status: string}) {
-    this.accounts.push(newAccount);
-  }
+  // onAccountAdded(newAccount: {name: string, status: string}) {
+  //   this.accountService.onAccountAdded;
+  // }
 
-  onStatusChanged(updateInfo: {id: number, newStatus: string}) {
-    this.accounts[updateInfo.id].status = updateInfo.newStatus;
+  // onStatusChanged(updateInfo: {id: number, newStatus: string}) {
+  //   this.accountService.onStatusChanged;
+  // }
+accounts!: { name: string; status: string; }[];
+  constructor(private accountService: AccountService){}
+
+  ngOnInit(): void {
+    this.accounts = this.accountService.accounts
   }
+  
 }
